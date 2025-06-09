@@ -9,8 +9,8 @@ import (
 )
 
 type urlCreationRequestBody struct {
-	url    string `json:"url" binding:"required"`
-	userId string `json: "user_id" binding:"required`
+	Url    string `json:"url" binding:"required"`
+	UserId string `json:"user_id" binding:"required"`
 }
 
 func CreateShortUrl(c *gin.Context) {
@@ -22,8 +22,8 @@ func CreateShortUrl(c *gin.Context) {
 		return
 	}
 
-	shortUrl := shortener.GenerateShortUrl(creationRequest.url, creationRequest.userId)
-	store.SaveUrlMapping(shortUrl, creationRequest.url, creationRequest.userId)
+	shortUrl := shortener.GenerateShortUrl(creationRequest.Url, creationRequest.UserId)
+	store.SaveUrlMapping(shortUrl, creationRequest.Url, creationRequest.UserId)
 
 	c.JSON(http.StatusOK, gin.H{
 		"messaage": "ShortUrl Created Successfuly",
