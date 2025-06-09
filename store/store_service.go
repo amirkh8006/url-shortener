@@ -20,7 +20,7 @@ type StoreService struct {
 	redisClient *redis.Client
 }
 
-func initStoreService() *StoreService {
+func InitStoreService() *StoreService {
 	redisClinet := redis.NewClient(&redis.Options{
 		Addr: "localhost:6379",
 		Password: "",

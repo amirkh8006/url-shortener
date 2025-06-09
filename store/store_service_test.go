@@ -8,7 +8,7 @@ import (
 var testStoreService *StoreService
 
 func init()  {
-	testStoreService = initStoreService()
+	testStoreService = InitStoreService()
 }
 
 func TestInsertaitionAndRetrieve(t *testing.T){
