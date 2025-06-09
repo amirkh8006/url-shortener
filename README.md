@@ -12,9 +12,6 @@ A simple and fast URL shortener built with **Go**, **Gin** framework, and **Redi
 
 ---
 
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
